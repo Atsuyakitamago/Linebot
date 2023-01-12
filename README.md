@@ -8,7 +8,7 @@ Her name is **Reon**.
 ![reon_commic_new](https://user-images.githubusercontent.com/83711779/211139102-f59b03c5-eff7-4c8d-8e4c-ab241ddc300b.jpg)
 
 
-I operate on a free plan and the number of messages I can send is limited.  
+I operate on a free plan and the number of messages LINE bot can send is limited.  
 Therefore, I do not publicly release QR code or LINE ID for this bot.  
 
 Using [noby api](https://webapi.cotogoto.ai/) and [cotoha api](https://api.ce-cotoha.com/contents/index.html), Reon have a conversation with you and never say anything negative.
