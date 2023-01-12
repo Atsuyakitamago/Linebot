@@ -39,7 +39,7 @@ def test():
     return "<h1>Tests</h1>"
 
 # cotoha api access token 取得 （1日1回）
-@app.route("/token")
+#@app.route("/token")
 def get_token():
     headers = {'Content-Type': 'application/json'}
     params = {'grantType': 'client_credentials', 'clientId': os.environ['clientId'], 'clientSecret': os.environ['clientSecret']}
@@ -95,6 +95,8 @@ def is_matched_full_text(message, con):
         return reply_message[0]
 
 def create_reply(message, con):
+
+    get_token()
 
     while True:
         # noby api で返信作成
