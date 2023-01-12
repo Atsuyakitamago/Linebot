@@ -8,22 +8,10 @@ Her name is **Reon**.
 ![reon_commic_new](https://user-images.githubusercontent.com/83711779/211139102-f59b03c5-eff7-4c8d-8e4c-ab241ddc300b.jpg)
 
 
-## how to use
+I operate on a free plan and the number of messages I can send is limited.  
+Therefore, I do not publicly release QR code or LINE ID for this bot.  
 
-### Python version(3.7.10)
-1. create a line bot account and get channel access token and channel secret.
-2. create a server on Render
-   1. select python as language
-   2. set secret environment variables
-      - YOUR_CHANNEL_ACCESS_TOKEN
-      - YOUR_CHANNEL_SECRET
-   3. set build command to `make setup`
-   4. set run command to `gunicorn app:app`
-3. set webhook url to your server url
-   - ex) https://mother-go.onrender.com/callback
-4. enable webhook in webhook settings
-
-
+Using [noby api](https://webapi.cotogoto.ai/) and [cotoha api](https://api.ce-cotoha.com/contents/index.html), Reon have a conversation with you and never say anything negative.
 
 ## Reference
 
