@@ -88,7 +88,7 @@ def handle_message(event):
 
 def is_matched_full_text(message, con):
     cur = con.cursor()
-    reply_message = cur.execute('''SELECT REPLY_WORD FROM REPLIES WHERE TARGET_WORD=? ''', (message)).fetchone()
+    reply_message = cur.execute('''SELECT REPLY_WORD FROM REPLIES WHERE TARGET_WORD=? ''', (message, )).fetchone()
     if reply_message is None:
         return ""
     else:
@@ -222,21 +222,21 @@ if __name__ == "__main__":
     app.run()
 
 
-    # if diary_mode_flag == 1:
-    #     received_text = transralte_lang(received_text, "JA", "EN")
+# if diary_mode_flag == 1:
+#     received_text = transralte_lang(received_text, "JA", "EN")
 
-    #     # request = requests.get("https://aws.random.cat/meow")
-    #     request = requests.get("https://dog.ceo/api/breeds/image/random")
-    #     request = request.json()
+#     # request = requests.get("https://aws.random.cat/meow")
+#     request = requests.get("https://dog.ceo/api/breeds/image/random")
+#     request = request.json()
 
-    #     image_url = request['message']
+#     image_url = request['message']
 
-    #     diary_mode_flag = 0
-    #     line_bot_api.push_message(user_id, ImageSendMessage(original_content_url=image_url, preview_image_url=image_url))
+#     diary_mode_flag = 0
+#     line_bot_api.push_message(user_id, ImageSendMessage(original_content_url=image_url, preview_image_url=image_url))
 
-    #     message = "But that doesn't matter, look at my friends!"
+#     message = "But that doesn't matter, look at my friends!"
 
-    #     cur = con.cursor()
-    #     # reset flag
-    #     cur.execute('''UPDATE USERS SET DIALY_MODE_FLAG = ? WHERE USERID = ?''', (0, user_id,))
-    #     con.commit()
+#     cur = con.cursor()
+#     # reset flag
+#     cur.execute('''UPDATE USERS SET DIALY_MODE_FLAG = ? WHERE USERID = ?''', (0, user_id,))
+#     con.commit()
