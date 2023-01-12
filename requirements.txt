@@ -1,0 +1,6 @@
+Flask
+Jinja2
+gunicorn
+line-bot-sdk
+flask_bootstrap
+pycld3

@@ -1,0 +1,4 @@
+# memo
+
+ファイルからまとめてインストール
+conda env update -n my_env --file ENV.yaml

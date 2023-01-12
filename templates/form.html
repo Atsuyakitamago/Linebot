@@ -1,0 +1,78 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        {% extends "bootstrap/base.html" %}
+        {% block content %}
+        <h1>This is admin page</h1>
+        <div class="d-flex flex-row flex-wrap mb-3 mt-3">
+            <div class="item mb-1 me-1">
+                <h2>Registered Messages List</h2>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Message</th>
+                            <th>Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for message in messages %}
+                        <tr>
+                            <td>{{message[1]}}</td>
+                            <td>
+                                <form action="/delete" method="POST">
+                                    <p><input class="btn btn-outline-primary" type="hidden" name="message_id" value={{message[0]}} />
+                                    </p>
+                                    <p><input class="btn btn-outline-primary" type="submit" value="delete" /></p>
+                                </form>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                <h2>Register Message</h2>
+
+                <form action="/register" method="POST">
+                    <p>Message <input type="text" name="register" /></p>
+                    <p><input class="btn btn-outline-primary" type="submit" value="register" /></p>
+                </form>
+            </div>
+            <div class="item mb-1 me-1">
+                <h2>Registered Replies List</h2>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Target Word</th>
+                            <th>Reply</th>
+                            <th>Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for reply in replies %}
+                        <tr>
+                            <td>{{reply[1]}}</td>
+                            <td>{{reply[2]}}</td>
+                            <td>
+                                <form action="/keyword_del" method="POST">
+                                    <p><input type="hidden" name="reply_id" value={{reply[0]}} /></p>
+                                    <p><input class="btn btn-outline-primary" type="submit" value="delete" /></p>
+                                </form>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <h2>Register Reply</h2>
+
+                <form action="/keyword_add" method="POST">
+                    <p>Target Word <input type="text" name="user" /></p>
+                    <p>Reply <input type="text" name="bot" /></p>
+                    <p><input class="btn btn-outline-primary" type="submit" value="register" /></p>
+                </form>
+            </div>
+        </div>
+{% endblock %}
+
+
