@@ -9,7 +9,7 @@ Her name is **Reon**.
 
 
 I operate on a free plan and the number of messages LINE bot can send is limited.  
-Therefore, I do not publicly release QR code or LINE ID for this bot.  
+Therefore, I do not publicly release QR code and LINE ID for this bot.  
 
 Using [noby api](https://webapi.cotogoto.ai/) and [cotoha api](https://api.ce-cotoha.com/contents/index.html), Reon have a conversation with you and never say anything negative.
 
