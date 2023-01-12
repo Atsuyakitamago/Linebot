@@ -73,7 +73,7 @@ def handle_message(event):
     user_id = event.source.user_id
     con = sqlite3.connect('tables.db')
 
-    if ("使い方" in received_text):
+    if ("使い方" in event.message.text):
         message = "私の名前はレオン！ 使いかたについて説明するね!"
 
     else:
